@@ -6,7 +6,7 @@ import sys,os,fnordchat;
 
 prefix=os.getenv("ADDR_PREFIX") or "ff08"
 
-c=fnordchat.chat(["darkfasel#ccc"],prefix="ff02",nick="flipbot")
+c=fnordchat.chat(["darkfasel#ccc"],prefix=prefix,nick="flipbot")
 def talk_handler(timestamp,nick,addr,method,text):
     if method=="normal" and "alarm" in text:
         message=nick+": "+text

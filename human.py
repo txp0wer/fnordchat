@@ -2,9 +2,13 @@
 # Author: txp0wer <txp0wer@users.github.com>
 # License: GNU GPLv3
 
+import sys,os,fnordchat;
+
+prefix=os.getenv("ADDR_PREFIX") or "ff08"
+
 import sys
 import fnordchat;
-c=fnordchat.chat(sys.argv[2:],prefix="ff02",nick=sys.argv[1])
+c=fnordchat.chat(sys.argv[2:],prefix=prefix,nick=sys.argv[1])
 l=sys.stdin.readline()[0:-1]
 while not c.shutdown:
     try:
