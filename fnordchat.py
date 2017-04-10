@@ -88,7 +88,6 @@ class chat:
         if listen:
             self.listen()
         for c in channels:
-            print type(c)
             assert(type(c)==bytes)
             self.join(c)
 
