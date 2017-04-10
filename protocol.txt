@@ -1,0 +1,14 @@
+General idea:
+  - clients =~ unicast addresses
+  - channels =~ multicast addresses
+  - message =~ udp packet
+
+Packet format:
+  {
+    timestamp_seconds:u64be,
+    timestamp_subseconds:u16be,
+    opcode:u8,
+    subcode:u8,
+    data:[u8]
+  }
+
